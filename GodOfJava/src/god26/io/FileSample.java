@@ -16,5 +16,6 @@ public class FileSample {
 		File file = new File(pathName);
 		System.out.println(pathName + " is exists? = " + file.exists());
 	}
+	//¤¤¤·¤©¤¤¤·¤©¤¤¤·¤©
 
 }
