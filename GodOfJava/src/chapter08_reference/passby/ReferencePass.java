@@ -8,12 +8,19 @@ public class ReferencePass {
 	// 예제처럼 메소드의 매개변수값으로 넘길때에는 원래 값은 놔두고 전달되는값이 진짜인것처럼 하지만 원래값은 변하지않음
 	// 기본자료형은 무조건 passbyvalue로 데이터전달 참조자료형은?
 	public static void main(String[] args) {
+		int x=5; 
 		ReferencePass rp = new ReferencePass();
 		rp.callPassByValue();
 		System.out.println("-----------------------");
 		rp.callPassByReference();
 		
 		System.out.println();
+		rp.doS(x);
+		System.out.println(x);
+	}
+	
+	public void doS(int x) {
+		System.out.println("dos = " +x++);
 	}
 	public void callPassByValue() {
 		int a = 10;
