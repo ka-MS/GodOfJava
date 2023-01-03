@@ -1,4 +1,4 @@
-package chapter10_inheritance.dinamic_static_binding;
+package chapter10_inheritance.dynamic_static_binding;
 
 public class DynamicBindingTest {
 	// 동적바인딩은 다형성을 사용하여 메소드를 호출할 떄 발생한다 

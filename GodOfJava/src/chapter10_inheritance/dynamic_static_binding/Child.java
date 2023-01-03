@@ -1,4 +1,4 @@
-package chapter10_inheritance.dinamic_static_binding;
+package chapter10_inheritance.dynamic_static_binding;
 
 public class Child extends Parent{
 	static void method() {
