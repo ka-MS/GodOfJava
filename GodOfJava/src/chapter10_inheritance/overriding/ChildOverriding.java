@@ -15,7 +15,7 @@ public class ChildOverriding extends ParentOverriding{
 	}
 	
 	// private, final, static으 로 지정된 부모메소드는 오버라이딩이되지 않는다
-	public void printNames(String name) {
+	public void printNames(String name) { //오버로딩된 상태
 		System.out.println("자식");
 	}
 	

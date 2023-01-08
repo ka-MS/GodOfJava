@@ -16,6 +16,7 @@ class Student extends Person{
 }
 
 // 캐스팅이란 타입 변환을 하는것 
+//https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EC%97%85%EC%BA%90%EC%8A%A4%ED%8C%85-%EB%8B%A4%EC%9A%B4%EC%BA%90%EC%8A%A4%ED%8C%85-%ED%95%9C%EB%B0%A9-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
 public class Casting{
 	public static void main(String[] args) {
 		
@@ -26,10 +27,22 @@ public class Casting{
 		Student stu = new Student("홍길동");
 		Person per = stu; // 부모클래스가 자식객체 stu를 가리키도록 되는것이 업케스팅
 		per.name = "이름입니다";
-//		per.check // 업케스팅을 통하여 per은 Student객체를 가리키지만 per은 person타입이기 때문에 per로는 Person클래스의 멤버에만 접근이 가능하다 그렇기에 per.check는 에러발생
+		// per.check 
+		// 업케스팅을 통하여 per은 Student객체를 가리키지만 per은 person타입이기 때문에 
+		// per로는 Person클래스의 멤버에만 접근이 가능하다 그렇기에 per.check는 에러발생
+		
+		// 업캐스팅 왜써? 공통적으로 할 수 있는 부분을 만들어 간단하게 다루기 위해서
+		//Shape[] s = new Shape[];
+		//s[0] = new Rectangle();
+		//s[1] = new Rectangle();
+		//s[2] = new Triangle();
+		//s[3] = new Triangle();
+		//s[4] = new Circle();
+		//s[5] = new Circle();
+		// 예시처럼 하나의 부모에 여러자식객체들을 하나의 자료형으로 관리하면 가독성도 좋고 유지보수성도 좋아진다.
 		
 		// 다운캐스팅
-		// 잃어버린 자식객체의 특성을 복구시켜주는것, 업케스팅된것을 원상태로 돌리는것
+		// 업캐스팅한 객체를 되돌려 잃어버린 자식객체의 특성을 복구시켜주는것, 업케스팅된것을 원상태로 돌리는것
 		Person per2 = new Student("민석"); // 이부분에서 업캐스팅이 실행됨
 //		per2.check // 업캐스팅이기때문에 컴파일 오류발생
 		Student stu2 = (Student)per2; // 여기서 다운캐스팅 실행 명시적 형변환 필요

@@ -30,7 +30,7 @@ public class StaticBindingTest {
 		test.method(parent);
 		test.method(child);
 		
-		parent.method(); // child 클래스에서 오버
+		parent.method(); // child 클래스에서 오버로딩됨
 	}
 
 }

@@ -25,6 +25,8 @@ public class Factorial {
 	// 보통 호출 스택은 제한된 양의 주소공간을 이루며 프로그램 시작시 결정된다.
 	// 호출 가능한 공간 이상을 사용하는 경우 stackoverflowerror에러가 발생하게된다.
 	
+	// 재귀함수를 쓰지 말고 stack을 이용해서 구현해 보자
+	
 	/* 실행 순서
 	 * 1. fact(4)가 실행이 되면 input이 1보다 크므로 fact(3)을 호출하고 함수는 fact(4)를 stack에 쌓는다
 	 * stack = [fact(4)]
