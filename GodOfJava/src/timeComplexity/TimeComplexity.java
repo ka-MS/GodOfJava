@@ -1,4 +1,4 @@
-package 시간복잡도;
+package timeComplexity;
 
 import java.util.Arrays;
 
