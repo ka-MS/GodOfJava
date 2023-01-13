@@ -1,4 +1,4 @@
-package 재귀함수;
+package 재귀함수구현;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,6 +8,7 @@ public class FIbonacciToStack {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println(Fibonacci3(1));
 		while (true) {
 			try {
 				System.out.print("피보나치 값 입력 : ");
@@ -61,10 +62,46 @@ public class FIbonacciToStack {
 			return Fibonacci2(n - 1) + Fibonacci2(n - 2);
 	}
 	
-	public static int Fibonacci3(int n ) {
+	public static int Fibonacci3(int n) {
 		Stack<Integer> fibo = new Stack<Integer>();
-		
 		int result = 0;
+		while(true) {
+			int k = n;
+			while(true) {
+				k--;
+				if(k <= 0) {
+					fibo.add(0);
+					break;
+				}
+				if(k == 1) {
+					fibo.add(1);
+					System.out.println(k);
+					break;
+				}else {
+					fibo.add(0);
+//					System.out.println(k);
+				}
+			}
+			k = n;
+			while(true) {
+				k -= 2;
+				if(k <=0) {
+					fibo.add(0);
+					break;
+				}
+				if(k == 1 || k == 2) {
+					fibo.add(1);
+					break;
+				}else {
+					fibo.add(0);
+				}
+			}
+			n--;
+			if(n == 0) {
+				break;
+			}
+		}
+		System.out.println(fibo);
 		return result;
 	}
 }
